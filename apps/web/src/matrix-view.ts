@@ -1,4 +1,5 @@
 type Sector = {
+  id: string;
   sector: string;
   requested: string;
   window: string;
@@ -25,17 +26,27 @@ if (body) {
   body.replaceChildren();
   for (const sector of matrix.sectors as Sector[]) {
     const row = document.createElement("tr");
-    for (const value of [
+    const values = [
       sector.sector,
       sector.requested,
       sector.window,
       sector.metric,
       sector.source ? `${sector.status} Source: ${sector.source}` : sector.status,
-    ]) {
+    ];
+    values.forEach((value, index) => {
       const cell = document.createElement("td");
-      cell.textContent = value;
+      if (index === 1 && sector.id === "legislators") {
+        cell.append("Committee review of ");
+        const link = document.createElement("a");
+        link.href = "./documents.html#clauses";
+        link.textContent = "Clause A and Clause B";
+        cell.append(link);
+        cell.append(".");
+      } else {
+        cell.textContent = value;
+      }
       row.append(cell);
-    }
+    });
     body.append(row);
   }
 }
@@ -43,6 +54,7 @@ if (body) {
 if (pendingList) {
   const pending = await fetch("./data/pending.json").then((response) => response.json());
   const items = pending.items as PendingItem[];
+  pendingList.replaceChildren();
   if (items.length === 0) {
     const item = document.createElement("li");
     item.textContent = "No pending items.";

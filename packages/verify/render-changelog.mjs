@@ -22,6 +22,7 @@ const html = `<!doctype html>
           <a href="./index.html">Home</a>
           <a href="./verify.html">Verification hub</a>
           <a href="./matrix.html">Accountability matrix</a>
+          <a href="./documents.html">Documents</a>
           <a href="./protocol.html">Protocol</a>
           <a href="./changelog.html" aria-current="page">Changelog</a>
         </nav>

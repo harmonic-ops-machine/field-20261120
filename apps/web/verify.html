@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Verification and status hub</title>
+    <link rel="stylesheet" href="./src/site.css" />
+  </head>
+  <body>
+    <header class="site">
+      <div class="wrap">
+        <p class="kicker">First page for an official or journalist · letter date November 20, 2026</p>
+        <h1>Verification &amp; status hub</h1>
+        <nav>
+          <a href="./index.html">Home</a>
+          <a href="./verify.html" aria-current="page">Verification hub</a>
+          <a href="./matrix.html">Accountability matrix</a>
+          <a href="./documents.html">Documents</a>
+          <a href="./protocol.html">Protocol</a>
+        </nav>
+      </div>
+    </header>
+    <main class="wrap">
+      <p class="banner">
+        Judgment under appeal in CAAP-26-0000625. The figures below are either the letter’s
+        record citations or cells copied from the public HIOSH workbook. This page does not
+        grade compliance.
+      </p>
+
+      <h2 id="inventory">Public inventory — as published August 3, 2026</h2>
+      <p>
+        Source page:
+        <a href="https://labor.hawaii.gov/hiosh/home/boilers-elevators-amusement-rides/">Boilers / Elevators / Amusement Rides</a>.
+        Workbook:
+        <a href="https://labor.hawaii.gov/hiosh/files/2026/08/State-of-Hawaii-Elevator-Equipment-Inventory.xlsx">State of Hawaii Elevator Equipment Inventory</a>
+        (the page says updated August 3, 2026).
+        A row extract is stored at <a href="./data/inventory-extract.json">data/inventory-extract.json</a>.
+        The workbook column is named STATUS. These columns do not contain an operating-permit expiration date.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Letter name</th>
+            <th>HAW</th>
+            <th>Type</th>
+            <th>Workbook STATUS</th>
+            <th>Location in the file</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Elevator #1</td>
+            <td>67-127</td>
+            <td>PASSENGER, traction, 24 floors, Westinghouse/Dover mod</td>
+            <td>ACTIVE</td>
+            <td>Oahu row 4201, Marine Surf, 364 Seaside Avenue, Honolulu 96815</td>
+          </tr>
+          <tr>
+            <td>Elevator #2</td>
+            <td>67-120</td>
+            <td>PASSENGER, traction, 24 floors, Westinghouse/Dover mod</td>
+            <td>ACTIVE</td>
+            <td>Oahu row 4200, same address</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        The same address also has HAW #04-021, a wheelchair lift, STATUS ACTIVE, Oahu row 4199.
+        The letter’s chronology concerns the two passenger elevators.
+      </p>
+      <p>
+        Letter record, which is a different date from the August 3, 2026 inventory:
+        both passenger permits expired October 31, 2017 (AOAO 0326–0328).
+        A temporary permit for Elevator #1 was issued March 14, 2019 and expired April 30, 2019
+        (AOAO 0321, Trial Ex. D-T).
+      </p>
+      <p>
+        Online EPS:
+        <a href="https://hiosh.ehawaii.gov/hiosh/#/">hiosh.ehawaii.gov/hiosh</a>.
+      </p>
+
+      <h2 id="uipa">UIPA request — one click</h2>
+      <p>
+        Send to
+        <a href="mailto:dlir.hiosh.elevators@hawaii.gov">dlir.hiosh.elevators@hawaii.gov</a>
+        and
+        <a href="mailto:dlir.hiosh.be@hawaii.gov">dlir.hiosh.be@hawaii.gov</a>,
+        or mail DLIR / HIOSH Boiler &amp; Elevator Inspection Branch, 830 Punchbowl Street, Room 425, Honolulu, HI 96813, (808) 586-9116.
+        Text is the November 20, 2026 letter.
+      </p>
+      <pre class="copy" id="uipa-text">All operating permits, temporary permits, safety-test and inspection reports, violation notices, abatement records, and DLIR invoices (including Invoices #80648 and #80649 and all post-April 30, 2019 permit issuances) from January 1, 2017 through December 31, 2020 for Marine Surf Waikiki, 364 Seaside Avenue, Honolulu, HI 96815, State IDs HAW #67-127 and HAW #67-120.</pre>
+      <button type="button" data-copy="uipa-text">Copy UIPA language</button>
+
+      <h2 id="dockets">eCourt* Kōkua</h2>
+      <ol>
+        <li>Open the Judiciary page: <a href="https://www.courts.state.hi.us/legal_references/records/jims_system_availability">eCourt* Kōkua access instructions</a>.</li>
+        <li>Use the manual linked there (2026 eCourt Kōkua manual): enter through the Judiciary site, accept the disclaimer, then search.</li>
+        <li>Case ID <strong>1RC191003776</strong> — District Court trial filings. The letter cites Dkts. 1–504, including Dkts. 396, 423, and 427.</li>
+        <li>Case ID <strong>CAAP-26-0000625</strong> — Intermediate Court of Appeals. The letter cites the certified record at CAAP Dkt. 15 and orders at CAAP Dkts. 2–4.</li>
+      </ol>
+
+      <h2 id="cab">Cab inspection checklist</h2>
+      <p>The letter’s one-sentence request, which any owner or journalist can send today:</p>
+      <pre class="copy" id="cab-text">Please state in writing the current posted HIOSH operating-permit expiration date and the most recent state safety-inspection date for both passenger elevators at Marine Surf Waikiki, 364 Seaside Avenue, Honolulu, HI 96815 (HAW #67-127 and HAW #67-120).</pre>
+      <button type="button" data-copy="cab-text">Copy status request</button>
+      <ul>
+        <li>Look inside each cab for the posted operating permit. A permit that can be checked shows the State ID, an expiration date that has not passed, and the inspection authority.</li>
+        <li>Photograph the posted permit so the State ID and expiration date are readable. Photograph the cab interior only as needed to show where the permit is posted.</li>
+        <li>HAR § 12-229-5.1 is the permit-posting rule cited in the letter. Owner access to association records is HRS § 514B-154.5. The letter states that collection counsel conditioned access on a notarized affidavit and advance fees (Trial Ex. J-10).</li>
+      </ul>
+
+      <p class="actions">
+        <a href="./matrix.html">Open the accountability matrix</a>
+        <a class="secondary" href="./documents.html">Documents and statutes</a>
+      </p>
+      <footer>
+        <p>Print this page’s address on the letter. The hub is the page a recipient should reach first.</p>
+      </footer>
+    </main>
+    <script type="module" src="./src/copy.ts"></script>
+  </body>
+</html>

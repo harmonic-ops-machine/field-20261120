@@ -1,0 +1,31 @@
+name: inventory-diff
+on:
+  schedule:
+    - cron: "30 18 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  diff:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: node packages/verify/inventory-diff.mjs
+      - name: open pull request
+        if: hashFiles('apps/web/public/data/inventory-changed.txt') != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          grep -q yes apps/web/public/data/inventory-changed.txt || exit 0
+          git config user.name "field-verify"
+          git config user.email "field-verify@users.noreply.github.com"
+          branch="inventory-diff-${{ github.run_id }}"
+          git checkout -b "$branch"
+          git add -f apps/web/public/data/inventory-diff.md
+          git commit -m "Show Marine Surf inventory cell changes"
+          git push -u origin "$branch"
+          gh pr create --title "Inventory cell change" --body-file apps/web/public/data/inventory-diff.md

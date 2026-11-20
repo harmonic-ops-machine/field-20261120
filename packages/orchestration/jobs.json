@@ -1,0 +1,14 @@
+{
+  "jobs": [
+    {
+      "id": "web-build",
+      "command": "npm run build -w @field/web",
+      "cwd": "repo"
+    },
+    {
+      "id": "pm-list",
+      "command": "npm run pm -- list",
+      "cwd": "repo"
+    }
+  ]
+}

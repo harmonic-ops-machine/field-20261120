@@ -1,0 +1,13 @@
+name: changelog
+on:
+  pull_request:
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: node packages/verify/render-changelog.mjs
+      - run: git diff --exit-code -- apps/web/changelog.html

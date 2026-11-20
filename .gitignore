@@ -1,0 +1,8 @@
+node_modules/
+dist/
+*.log
+.DS_Store
+.env
+.env.*
+apps/web/public/data/inventory-changed.txt
+apps/web/public/data/inventory-diff.md

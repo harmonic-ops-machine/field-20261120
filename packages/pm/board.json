@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "id": "web-build",
+      "title": "Web build is ready to run",
+      "status": "ready",
+      "area": "web"
+    },
+    {
+      "id": "pm-board",
+      "title": "Local project board",
+      "status": "ready",
+      "area": "pm"
+    },
+    {
+      "id": "orchestration",
+      "title": "Local job runner",
+      "status": "ready",
+      "area": "orchestration"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Public verification protocol</title>
+    <link rel="stylesheet" href="./src/site.css" />
+  </head>
+  <body>
+    <header class="site">
+      <div class="wrap">
+        <p class="kicker">The only rules the checker may apply</p>
+        <h1>Verification protocol</h1>
+        <nav>
+          <a href="./index.html">Home</a>
+          <a href="./verify.html">Verification hub</a>
+          <a href="./matrix.html">Accountability matrix</a>
+          <a href="./documents.html">Documents</a>
+          <a href="./protocol.html" aria-current="page">Protocol</a>
+        </nav>
+      </div>
+    </header>
+    <main class="wrap">
+      <p class="banner">
+        A status cell changes only under this page. The model may propose a class.
+        A second script, with no model, accepts or rejects that proposal. Both results are published.
+      </p>
+      <h2>Allowlist</h2>
+      <p>The checker fetches only the URLs in <a href="./data/allowlist.json">data/allowlist.json</a>, plus a URL that is already stored on a matrix row once one is added there. It does not open email, a logged-in court system, or the EPS account.</p>
+      <h2>Classes</h2>
+      <ol>
+        <li><strong>no_public_action.</strong> Every fetched hash matches the stored snapshot, or this is the first snapshot. Status becomes “No public source — checked [date]”. Sectors that already cite a source are left as they are.</li>
+        <li><strong>source_confirmed_action.</strong> The fetched text contains a verbatim quote of the requested act: an inventory cell change, a UIPA release, a bill, an article, or board minutes. The status quotes that span and links the URL.</li>
+        <li><strong>unsupported_assertion.</strong> The fetched text asserts a fact, the quote is verbatim, and <code>contradicts</code> is a verbatim span of the inventory extract or the judgment table already on this site. The label is “Not supported by the primary record”. This protocol does not use “false” or “fraud”.</li>
+        <li><strong>delegation_without_record.</strong> The quote names another office or person as the actor and the same fetched text does not contain the requested permit, invoice, or docket record. A referral that is followed by the record is source-confirmed action.</li>
+        <li><strong>pending.</strong> The fetch failed, the quote is not in the fetched text, the URL is off the allowlist, the class is unknown, or the model output is not JSON. Pending is shown on the matrix page. It does not change a sector status.</li>
+      </ol>
+      <h2>Gate</h2>
+      <ul>
+        <li>The class must be one of the five names above.</li>
+        <li>The sector, when set, must be one of the six matrix ids.</li>
+        <li>Except for no_public_action, the URL must be on the allowlist.</li>
+        <li>Except for no_public_action, the quote must be a character-for-character substring of the fetched text.</li>
+        <li>unsupported_assertion also requires <code>contradicts</code> to be a substring of the committed inventory extract or matrix file.</li>
+      </ul>
+      <h2>What is published after every run</h2>
+      <ul>
+        <li><a href="./data/agent-log.jsonl">data/agent-log.jsonl</a> — time, model id, prompt hash, input hash, raw proposal, gate result.</li>
+        <li><a href="./prompts/proposal.txt">prompts/proposal.txt</a> — the prompt text.</li>
+        <li><a href="./data/snapshots.json">data/snapshots.json</a> — SHA-256 of each fetched file.</li>
+        <li><a href="./data/pending.json">data/pending.json</a> — rejected or ambiguous proposals.</li>
+        <li><a href="./data/changelog.json">data/changelog.json</a> — one line per run.</li>
+      </ul>
+      <p>The model is Grok 4.7 through the xAI API when <code>XAI_API_KEY</code> is present in the GitHub Actions secret. The key is not in this repository and not in the browser bundle. If the key is absent, a byte-for-byte unchanged allowlist still records no_public_action. A changed file without a key is pending.</p>
+      <p>Production is the <code>main</code> branch of this repository, built by Vite and served by Vercel from <code>apps/web</code>. The printed path remains <code>/verify.html</code>.</p>
+      <footer>
+        <p>Mail to the address on the letter is not a class by itself. It can be posted only when the attachment is already a public document with a URL on the allowlist.</p>
+      </footer>
+    </main>
+  </body>
+</html>

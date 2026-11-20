@@ -1,0 +1,52 @@
+{
+  "source_page": "https://labor.hawaii.gov/hiosh/home/boilers-elevators-amusement-rides/",
+  "source_file": "https://labor.hawaii.gov/hiosh/files/2026/08/State-of-Hawaii-Elevator-Equipment-Inventory.xlsx",
+  "source_page_updated": "2026-08-03",
+  "extracted": "2026-11-20",
+  "note": "Rows are copied from the public workbook. STATUS is the workbook column. These columns do not show an operating-permit expiration date. This extract is not an agency record.",
+  "columns": ["LOCATION_NAME", "ADDRESS", "CITY", "ZIP", "HAW", "STATUS", "ELEVATOR_TYPE", "PWR", "FLOORS", "MFG"],
+  "rows": [
+    {
+      "LOCATION_NAME": "MARINE SURF",
+      "ADDRESS": "364 SEASIDE AVENUE",
+      "CITY": "HONOLULU",
+      "ZIP": "96815",
+      "HAW": "67-120",
+      "STATUS": "ACTIVE",
+      "ELEVATOR_TYPE": "PASSENGER",
+      "PWR": "TRACTION",
+      "FLOORS": "24",
+      "MFG": "WESTINGHOUSE/DOVER MOD",
+      "sheet": "Oahu",
+      "row": 4200
+    },
+    {
+      "LOCATION_NAME": "MARINE SURF",
+      "ADDRESS": "364 SEASIDE AVENUE",
+      "CITY": "HONOLULU",
+      "ZIP": "96815",
+      "HAW": "67-127",
+      "STATUS": "ACTIVE",
+      "ELEVATOR_TYPE": "PASSENGER",
+      "PWR": "TRACTION",
+      "FLOORS": "24",
+      "MFG": "WESTINGHOUSE/DOVER MOD",
+      "sheet": "Oahu",
+      "row": 4201
+    },
+    {
+      "LOCATION_NAME": "MARINE SURF",
+      "ADDRESS": "364 SEASIDE AVENUE",
+      "CITY": "HONOLULU",
+      "ZIP": "96815",
+      "HAW": "04-021",
+      "STATUS": "ACTIVE",
+      "ELEVATOR_TYPE": "WHEELCHAIR LIFT",
+      "PWR": "HANDI - WHEELCHR LFT",
+      "FLOORS": "2",
+      "MFG": "PORCH",
+      "sheet": "Oahu",
+      "row": 4199
+    }
+  ]
+}

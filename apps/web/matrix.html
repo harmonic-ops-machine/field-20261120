@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Accountability tracking matrix</title>
+    <link rel="stylesheet" href="./src/site.css" />
+  </head>
+  <body>
+    <header class="site">
+      <div class="wrap">
+        <p class="kicker">Public observation log · not a compliance score</p>
+        <h1>Accountability tracking matrix</h1>
+        <nav>
+          <a href="./index.html">Home</a>
+          <a href="./verify.html">Verification hub</a>
+          <a href="./matrix.html" aria-current="page">Accountability matrix</a>
+          <a href="./documents.html">Documents</a>
+          <a href="./protocol.html">Protocol</a>
+        </nav>
+      </div>
+    </header>
+    <main class="wrap">
+      <p class="note">
+        Launch state for every sector: <strong>No response yet — as of November 20, 2026</strong>.
+        An empty source cell means no public source has been posted. Leaving the cell unchanged
+        past any later public event is the record of non-response. The file does not assign anyone
+        a duty to monitor replies.
+      </p>
+      <p class="note">
+        Updates are made only from publicly verifiable sources (UIPA responses, inventory updates,
+        published articles, board minutes, legislative records). An institution may email
+        <a href="mailto:niko@mojehawaje.pl?subject=Status%20%E2%80%93%20%5BSector%5D">niko@mojehawaje.pl</a>
+        with the subject “Status – [Sector]”. A message is posted only after the source is confirmed.
+        The address is the one printed on the letter. This page has no form and stores no submitter data.
+      </p>
+      <div style="overflow-x:auto">
+        <table>
+          <thead>
+            <tr>
+              <th>Sector</th>
+              <th>Requested action</th>
+              <th>Response window</th>
+              <th>Public success metric</th>
+              <th>Reported status / date / source</th>
+            </tr>
+          </thead>
+          <tbody id="matrix-body">
+            <tr>
+              <td>1. Administrators (DLIR / HIOSH, DCCA, OIP)</td>
+              <td>Cross-link intake with the permit registry; release files for HAW #67-127 and #67-120, including post-April 30, 2019 records; apply HRS Chapter 397 and HAR Chapter 12-229.</td>
+              <td>No numeric window is stated in the letter.</td>
+              <td>A public UIPA response, inventory update, or agency writing on those State IDs.</td>
+              <td>No response yet — as of November 20, 2026. Source: none.</td>
+            </tr>
+            <tr>
+              <td>2. Legislators</td>
+              <td>Committee review of <a href="./documents.html#clauses">Clause A and Clause B</a>.</td>
+              <td>No numeric window is stated in the letter.</td>
+              <td>A bill, hearing notice, or committee record quoting or acting on a clause.</td>
+              <td>No response yet — as of November 20, 2026. Source: none.</td>
+            </tr>
+            <tr>
+              <td>3. Media</td>
+              <td>Examine the dockets and the elevator inventory.</td>
+              <td>No numeric window is stated in the letter.</td>
+              <td>A published article citing the docket, the inventory, or the letter.</td>
+              <td>No response yet — as of November 20, 2026. Source: none.</td>
+            </tr>
+            <tr>
+              <td>4. Insurers</td>
+              <td>Review permit verification and disclosure of insurer-funded defense, including Claim #PHGG18101222417.</td>
+              <td>No numeric window is stated in the letter.</td>
+              <td>A public filing or carrier writing on permit verification or that claim.</td>
+              <td>No response yet — as of November 20, 2026. Source: none.</td>
+            </tr>
+            <tr>
+              <td>5. Management companies</td>
+              <td>Confirm posted unexpired permits, contractor scope before owner billing, and HRS § 514B-154.5 access.</td>
+              <td>No numeric window is stated in the letter.</td>
+              <td>A posted permit, a written permit date, or a record produced under § 514B-154.5.</td>
+              <td>No response yet — as of November 20, 2026. Source: none.</td>
+            </tr>
+            <tr>
+              <td>6. Association directors</td>
+              <td>Demand inspection certificates and contracts before escalation; use HRS § 514B-161 mediation.</td>
+              <td>No numeric window is stated in the letter.</td>
+              <td>Board minutes or another public record of that demand or of mediation.</td>
+              <td>No response yet — as of November 20, 2026. Source: none.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h2>Pending</h2>
+      <p>A pending row is visible and is not a finding. The checker writes these when a fetch fails, the model is absent, or the quote gate rejects a proposal.</p>
+      <ul id="pending-list"></ul>
+      <h2>Status update protocol</h2>
+      <p>A posted update uses four fields only: Sector, Action taken, Date, Supporting document link. The machine-readable copy is <a href="./data/matrix.json">data/matrix.json</a>.</p>
+      <h2>Changelog</h2>
+      <ul>
+        <li>November 20, 2026 — Site opened. Every status cell set to “No response yet — as of November 20, 2026”. Inventory extract taken from the workbook the HIOSH page dates August 3, 2026. See <a href="./data/changelog.json">data/changelog.json</a>.</li>
+      </ul>
+      <footer>
+        <p>Same disclaimer as the documents page: compilation of the letter and public records, not an official agency record.</p>
+      </footer>
+    </main>
+    <script type="module" src="./src/matrix-view.ts"></script>
+  </body>
+</html>

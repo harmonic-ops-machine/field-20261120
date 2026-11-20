@@ -1,0 +1,26 @@
+name: verify
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: node packages/verify/run.mjs
+        env:
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+          XAI_MODEL: grok-4.7
+      - run: npm install && npm run build
+      - name: commit ledger
+        run: |
+          git config user.name "field-verify"
+          git config user.email "field-verify@users.noreply.github.com"
+          git add apps/web/public/data apps/web/public/prompts
+          git diff --cached --quiet && exit 0
+          git commit -m "Record public-source check"
+          git push

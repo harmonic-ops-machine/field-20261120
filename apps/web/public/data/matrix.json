@@ -1,0 +1,60 @@
+{
+  "as_of": "2026-11-20",
+  "default_status": "No response yet — as of November 20, 2026",
+  "sectors": [
+    {
+      "id": "administrators",
+      "sector": "1. Administrators (DLIR / HIOSH, DCCA, OIP)",
+      "requested": "Cross-link public-records and complaint intake with the permit-expiration registry; release permit and inspection files for HAW #67-127 and HAW #67-120, including post-April 30, 2019 records, under UIPA; apply HRS Chapter 397 and HAR Chapter 12-229.",
+      "window": "No numeric response window is stated in the November 20, 2026 letter.",
+      "metric": "A public UIPA response, inventory update, or agency writing that addresses the two State IDs and the post-April 30, 2019 records.",
+      "status": "No response yet — as of November 20, 2026",
+      "source": ""
+    },
+    {
+      "id": "legislators",
+      "sector": "2. Legislators",
+      "requested": "Committee review of proposed Clause A (HRS § 514B-154.5) and Clause B (HRS § 514B-157).",
+      "window": "No numeric response window is stated in the November 20, 2026 letter.",
+      "metric": "A bill, hearing notice, or committee record that quotes or acts on Clause A or Clause B.",
+      "status": "No response yet — as of November 20, 2026",
+      "source": ""
+    },
+    {
+      "id": "media",
+      "sector": "3. Media",
+      "requested": "Examine the certified dockets and the state elevator inventory for document-verified reporting.",
+      "window": "No numeric response window is stated in the November 20, 2026 letter.",
+      "metric": "A published article that cites the docket, the inventory, or the letter.",
+      "status": "No response yet — as of November 20, 2026",
+      "source": ""
+    },
+    {
+      "id": "insurers",
+      "sector": "4. Insurers",
+      "requested": "Review underwriting and defense-management protocols for continuous state operating permits and disclosure of insurer-funded defense counsel, including Claim #PHGG18101222417.",
+      "window": "No numeric response window is stated in the November 20, 2026 letter.",
+      "metric": "A public filing, bulletin, or carrier writing that addresses permit verification or the cited claim.",
+      "status": "No response yet — as of November 20, 2026",
+      "source": ""
+    },
+    {
+      "id": "management",
+      "sector": "5. Management companies",
+      "requested": "Confirm posted, unexpired HIOSH operating permits; verify contractor obligations before owner billing; honor HRS § 514B-154.5 record requests.",
+      "window": "No numeric response window is stated in the November 20, 2026 letter.",
+      "metric": "A posted permit, written permit date, or public record produced under HRS § 514B-154.5.",
+      "status": "No response yet — as of November 20, 2026",
+      "source": ""
+    },
+    {
+      "id": "directors",
+      "sector": "6. Association directors",
+      "requested": "Demand primary inspection certificates and vendor contracts before legal escalation, and use early mediation under HRS § 514B-161.",
+      "window": "No numeric response window is stated in the November 20, 2026 letter.",
+      "metric": "Board minutes or another public record showing the certificates were demanded or mediation was used.",
+      "status": "No response yet — as of November 20, 2026",
+      "source": ""
+    }
+  ]
+}

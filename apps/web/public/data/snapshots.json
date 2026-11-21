@@ -1,3 +1,16 @@
 {
-  "sources": {}
+  "sources": {
+    "https://labor.hawaii.gov/hiosh/files/2026/08/State-of-Hawaii-Elevator-Equipment-Inventory.xlsx": {
+      "sha256": "c6fbf15d04359f3e1206e469ccd5ecae2d6f383a4e1d44fc0c21865e687bc284",
+      "checked": "2026-11-21"
+    },
+    "https://labor.hawaii.gov/hiosh/home/boilers-elevators-amusement-rides/": {
+      "sha256": "9a66d8afbccf6e62c9911da0b0d6ce87d2c6871e2d61f15ee0489b77a54cad96",
+      "checked": "2026-11-21"
+    },
+    "https://www.courts.state.hi.us/legal_references/records/jims_system_availability": {
+      "sha256": "c3da91015de4f39c25b01736107f13cef3e05f0868798f7933bfc75f256e67f5",
+      "checked": "2026-11-21"
+    }
+  }
 }
